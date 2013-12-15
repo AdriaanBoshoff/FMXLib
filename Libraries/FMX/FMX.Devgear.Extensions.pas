@@ -1,3 +1,11 @@
+{*****************************************************************************}
+{ @unit   FMX.Devgear.Extensions                                              }
+{ @data   2013/12/15                                                          }
+{ @author Humphery(hjfactory@gmail.com) of devgear.co.kr                      }
+{         - http://blog.hjf.pe.kr/                                            }
+{ @description                                                                }
+{  파이어몽키 기능확장 라이브러리                                             }
+{*****************************************************************************}
 unit FMX.Devgear.Extensions;
 
 interface

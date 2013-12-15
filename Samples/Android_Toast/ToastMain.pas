@@ -53,7 +53,7 @@ begin
     ToastMessage(Edit1.Text)
   else
   begin
-    ToastMessage(Edit1.Text, TToastDuration.tdLengthLong, TToastPosition(FToastPosition), StrToIntDef(edtX.Text), StrToIntDef(edtY.Text));
+    ToastMessage(Edit1.Text, TToastDuration.tdLengthLong, TToastPosition(FToastPosition), StrToIntDef(edtX.Text, 10), StrToIntDef(edtY.Text, 10));
   end;
 {$ENDIF}
 end;

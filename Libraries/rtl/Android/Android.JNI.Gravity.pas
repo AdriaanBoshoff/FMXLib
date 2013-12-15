@@ -2,6 +2,7 @@
 { @class  TJGravity                                                           }
 { @data   2013/12/15                                                          }
 { @author Humphery(hjfactory@gmail.com) of devgear.co.kr                      }
+{         - http://blog.hjf.pe.kr/                                            }
 { @brief  http://developer.android.com/reference/android/view/Gravity.html    }
 {*****************************************************************************}
 

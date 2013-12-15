@@ -7,4 +7,5 @@ __history
 *.map
 *.exe
 *.dll
-bin/*
+Debug
+Release

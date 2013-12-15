@@ -1,0 +1,212 @@
+object Form3: TForm3
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop]
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object Button1: TButton
+    Anchors = [akLeft, akTop, akRight]
+    Height = 44.000000000000000000
+    Position.X = 56.000000000000000000
+    Position.Y = 96.000000000000000000
+    TabOrder = 0
+    Text = 'Toast Message'
+    Trimming = ttCharacter
+    Width = 289.000000000000000000
+    OnClick = Button1Click
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [igLongTap, igDoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 1
+    Text = 'I am toast message.'
+    Position.X = 32.000000000000000000
+    Position.Y = 48.000000000000000000
+    Width = 329.000000000000000000
+    Height = 32.000000000000000000
+    KillFocusByReturn = False
+  end
+  object CheckBox1: TCheckBox
+    Height = 23.000000000000000000
+    IsChecked = True
+    Position.X = 24.000000000000000000
+    Position.Y = 168.000000000000000000
+    TabOrder = 2
+    Text = 'Default position'
+    Width = 345.000000000000000000
+  end
+  object GridLayout1: TGridLayout
+    Height = 300.000000000000000000
+    ItemHeight = 100.000000000000000000
+    ItemWidth = 100.000000000000000000
+    Orientation = orHorizontal
+    Position.X = 50.000000000000000000
+    Position.Y = 193.000000000000000000
+    Width = 300.000000000000000000
+    object TopLeft: TCornerButton
+      Tag = 1
+      StaysPressed = True
+      Height = 100.000000000000000000
+      Sides = [sdTop, sdLeft, sdBottom, sdRight]
+      TabOrder = 0
+      Text = 'TopLeft'
+      Width = 100.000000000000000000
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      OnClick = CornerButtonClick
+    end
+    object CornerButton2: TCornerButton
+      Tag = 2
+      StaysPressed = True
+      Height = 100.000000000000000000
+      Position.X = 100.000000000000000000
+      Sides = [sdTop, sdLeft, sdBottom, sdRight]
+      TabOrder = 1
+      Text = 'Top'
+      Width = 100.000000000000000000
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      OnClick = CornerButtonClick
+    end
+    object CornerButton3: TCornerButton
+      Tag = 3
+      StaysPressed = True
+      Height = 100.000000000000000000
+      Position.X = 200.000000000000000000
+      Sides = [sdTop, sdLeft, sdBottom, sdRight]
+      TabOrder = 2
+      Text = 'TopRight'
+      Width = 100.000000000000000000
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      OnClick = CornerButtonClick
+    end
+    object CornerButton4: TCornerButton
+      Tag = 4
+      StaysPressed = True
+      Height = 100.000000000000000000
+      Position.Y = 100.000000000000000000
+      Sides = [sdTop, sdLeft, sdBottom, sdRight]
+      TabOrder = 3
+      Text = 'Left'
+      Width = 100.000000000000000000
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      OnClick = CornerButtonClick
+    end
+    object CornerButton5: TCornerButton
+      Tag = 5
+      StaysPressed = True
+      Height = 100.000000000000000000
+      Position.X = 100.000000000000000000
+      Position.Y = 100.000000000000000000
+      Sides = [sdTop, sdLeft, sdBottom, sdRight]
+      TabOrder = 4
+      Text = 'Center'
+      Width = 100.000000000000000000
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      OnClick = CornerButtonClick
+    end
+    object CornerButton6: TCornerButton
+      Tag = 6
+      StaysPressed = True
+      Height = 100.000000000000000000
+      Position.X = 200.000000000000000000
+      Position.Y = 100.000000000000000000
+      Sides = [sdTop, sdLeft, sdBottom, sdRight]
+      TabOrder = 5
+      Text = 'Right'
+      Width = 100.000000000000000000
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      OnClick = CornerButtonClick
+    end
+    object CornerButton7: TCornerButton
+      Tag = 7
+      StaysPressed = True
+      Height = 100.000000000000000000
+      Position.Y = 200.000000000000000000
+      Sides = [sdTop, sdLeft, sdBottom, sdRight]
+      TabOrder = 6
+      Text = 'BottomLeft'
+      Width = 100.000000000000000000
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      OnClick = CornerButtonClick
+    end
+    object CornerButton8: TCornerButton
+      Tag = 8
+      StaysPressed = True
+      Height = 100.000000000000000000
+      Position.X = 100.000000000000000000
+      Position.Y = 200.000000000000000000
+      Sides = [sdTop, sdLeft, sdBottom, sdRight]
+      TabOrder = 7
+      Text = 'Bottom'
+      Width = 100.000000000000000000
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      OnClick = CornerButtonClick
+    end
+    object CornerButton9: TCornerButton
+      Tag = 9
+      StaysPressed = True
+      Height = 100.000000000000000000
+      Position.X = 200.000000000000000000
+      Position.Y = 200.000000000000000000
+      Sides = [sdTop, sdLeft, sdBottom, sdRight]
+      TabOrder = 8
+      Text = 'BottomRight'
+      Width = 100.000000000000000000
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      OnClick = CornerButtonClick
+    end
+  end
+  object edtY: TEdit
+    Touch.InteractiveGestures = [igLongTap, igDoubleTap]
+    TabOrder = 4
+    Text = '10'
+    Position.X = 248.000000000000000000
+    Position.Y = 500.000000000000000000
+    Width = 100.000000000000000000
+    Height = 32.000000000000000000
+    KillFocusByReturn = False
+    object Label2: TLabel
+      Height = 23.000000000000000000
+      Position.X = -32.000000000000000000
+      Position.Y = 9.000000000000000000
+      Text = 'Y'
+      Width = 31.000000000000000000
+      Trimming = ttCharacter
+    end
+  end
+  object edtX: TEdit
+    Touch.InteractiveGestures = [igLongTap, igDoubleTap]
+    TabOrder = 5
+    Text = '10'
+    Position.X = 96.000000000000000000
+    Position.Y = 500.000000000000000000
+    Width = 100.000000000000000000
+    Height = 32.000000000000000000
+    KillFocusByReturn = False
+    object Label1: TLabel
+      Height = 23.000000000000000000
+      Position.X = -38.000000000000000000
+      Position.Y = 9.000000000000000000
+      Text = 'X'
+      Width = 31.000000000000000000
+      Trimming = ttCharacter
+    end
+  end
+end

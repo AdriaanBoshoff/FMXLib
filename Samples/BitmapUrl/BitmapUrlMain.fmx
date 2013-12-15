@@ -1,0 +1,92 @@
+object Form3: TForm3
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 548
+  ClientWidth = 320
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop]
+  DesignerMobile = True
+  DesignerWidth = 320
+  DesignerHeight = 568
+  DesignerDeviceName = 'iPhone5'
+  DesignerOrientation = 0
+  DesignerOSVersion = '7'
+  object Button1: TButton
+    Anchors = [akLeft, akTop, akRight]
+    Height = 44.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 240.000000000000000000
+    TabOrder = 0
+    Text = 'LoadFromUrl(size)'
+    Trimming = ttCharacter
+    Width = 289.000000000000000000
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Anchors = [akLeft, akTop, akRight]
+    Height = 44.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 288.000000000000000000
+    TabOrder = 2
+    Text = 'LoadFromUrl'
+    Trimming = ttCharacter
+    Width = 289.000000000000000000
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Anchors = [akLeft, akTop, akRight]
+    Height = 44.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 336.000000000000000000
+    TabOrder = 3
+    Text = 'LoadThumbnailFromUrl'
+    Trimming = ttCharacter
+    Width = 289.000000000000000000
+    OnClick = Button3Click
+  end
+  object Layout1: TLayout
+    Align = alTop
+    Height = 185.000000000000000000
+    Width = 320.000000000000000000
+    object Image1: TImage
+      MultiResBitmap = <
+        item
+        end>
+      Anchors = [akLeft, akTop, akRight]
+      Height = 153.000000000000000000
+      Position.X = 32.000000000000000000
+      Position.Y = 16.000000000000000000
+      Width = 257.000000000000000000
+    end
+  end
+  object edtUrl: TEdit
+    Touch.InteractiveGestures = [igLongTap, igDoubleTap]
+    Anchors = [akLeft, akTop, akRight]
+    TabOrder = 5
+    Text = 'http://cfile2.uf.tistory.com/image/2353573E529FDAAC032731'
+    Position.X = 64.000000000000000000
+    Position.Y = 200.000000000000000000
+    Width = 241.000000000000000000
+    Height = 30.000000000000000000
+    KillFocusByReturn = False
+    object Label1: TLabel
+      Height = 21.000000000000000000
+      Position.X = -56.000000000000000000
+      Position.Y = 5.000000000000000000
+      Text = 'URL'
+      TextAlign = taCenter
+      Width = 49.000000000000000000
+      Trimming = ttCharacter
+    end
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [igPan, igLongTap, igDoubleTap]
+    Align = alBottom
+    Height = 156.000000000000000000
+    Position.Y = 392.000000000000000000
+    TabOrder = 1
+    Width = 320.000000000000000000
+  end
+end

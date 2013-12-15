@@ -1,4 +1,5 @@
 FMX.Devgear
 ===========
 
-Firemonkey(Delphi) libraries of devgear
+Firemonkey(Delphi) libraries and sample
+http://blog.hjf.pe.kr/

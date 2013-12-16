@@ -14,6 +14,14 @@ Firemonkey(Delphi) libraries and sample
 
 ![ScreenShot](https://github.com/hjfactory/FMX.Devgear/blob/master/Samples/BitmapUrl/BitmapUrl.jpg?raw=true)
 
+ * procedure LoadFromUrl(AUrl: string; var outSize: Int64); overload;
+ * procedure LoadFromUrl(AUrl: string); overload;
+ * procedure LoadThumbnailFromUrl(AUrl: string; const AFitWidth, AFitHeight: Integer);
+
 * Toast(Android only)
  
 ![ScreenShot](https://github.com/hjfactory/FMX.Devgear/blob/master/Samples/Android_Toast/ToastMessage.png?raw=true)
+
+ * procedure ToastMessage(const AMsg: string; ADuration: TToastDuration = tdLengthShort); overload;
+ * procedure ToastMessage(const AMsg: string; ADuration: TToastDuration; APosition: TToastPosition; AXOffset, AYOffset: Integer); overload;
+  * Gravity가 적용되어 Toast Message의 위치설정 가능

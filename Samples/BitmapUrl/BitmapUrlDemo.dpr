@@ -4,8 +4,8 @@ uses
   System.StartUpCopy,
   FMX.MobilePreview,
   FMX.Forms,
-  Unit3 in 'Unit3.pas' {Form3},
-  FMX.Devgear.Extensions in 'FMX.Devgear.Extensions.pas';
+  BitmapUrlMain in 'BitmapUrlMain.pas' {Form3},
+  FMX.Devgear.Extensions in '..\..\Libraries\FMX\FMX.Devgear.Extensions.pas';
 
 {$R *.res}
 

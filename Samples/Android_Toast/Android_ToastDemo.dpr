@@ -4,8 +4,10 @@ uses
   System.StartUpCopy,
   FMX.MobilePreview,
   FMX.Forms,
-  Unit3 in 'Unit3.pas' {Form3},
-  Android.JNI.Toast in 'Android.JNI.Toast.pas';
+  ToastMain in 'ToastMain.pas' {Form3},
+  Android.JNI.Toast in '..\..\Libraries\rtl\Android\Android.JNI.Toast.pas',
+  FMX.Devgear.Extensions in '..\..\Libraries\FMX\FMX.Devgear.Extensions.pas',
+  Android.JNI.Gravity in '..\..\Libraries\rtl\Android\Android.JNI.Gravity.pas';
 
 {$R *.res}
 

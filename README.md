@@ -10,7 +10,8 @@ Firemonkey(Delphi) libraries and sample
 
 설명
 ====
-* BitmapUrl
+BitmapUrl
+----
 
 ![ScreenShot](https://github.com/hjfactory/FMX.Devgear/blob/master/Samples/BitmapUrl/BitmapUrl.jpg?raw=true)
 
@@ -18,8 +19,9 @@ Firemonkey(Delphi) libraries and sample
  * procedure LoadFromUrl(AUrl: string); overload;
  * procedure LoadThumbnailFromUrl(AUrl: string; const AFitWidth, AFitHeight: Integer);
 
-* Toast(Android only)
- 
+Toast(Android only)
+----
+
 ![ScreenShot](https://github.com/hjfactory/FMX.Devgear/blob/master/Samples/Android_Toast/ToastMessage.png?raw=true)
 
  * procedure ToastMessage(const AMsg: string; ADuration: TToastDuration = tdLengthShort); overload;

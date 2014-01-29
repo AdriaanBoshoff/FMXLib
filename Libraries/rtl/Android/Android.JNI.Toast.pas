@@ -25,7 +25,8 @@ type
     function _GetLENGTH_SHORT: Integer; cdecl;
     {Methods}
     function init(context: JContext): JToast; cdecl; overload;
-    function makeText(context: JContext; text: JCharSequence; duration: Integer): JToast; cdecl;
+    function makeText(context: JContext; text: JCharSequence;
+      duration: Integer): JToast; cdecl;
     {Properties}
     property LENGTH_LONG: Integer read _GetLENGTH_LONG;
     property LENGTH_SHORT: Integer read _GetLENGTH_SHORT;
@@ -50,6 +51,7 @@ type
     procedure setView(view: JView); cdecl;
     procedure show; cdecl;
   end;
+
   TJToast = class(TJavaGenericImport<JToastClass, JToast>) end;
 {$ENDIF}
 

@@ -42,7 +42,7 @@ var
 implementation
 
 uses
-  FMX.Devgear.Extensions;
+  FMX.Devgear.Android.Toast;
 
 {$R *.fmx}
 

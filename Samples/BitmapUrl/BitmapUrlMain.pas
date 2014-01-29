@@ -32,7 +32,7 @@ var
 implementation
 
 uses
-  FMX.Devgear.Extensions;
+  FMX.Devgear.HelperClass;
 
 {$R *.fmx}
 
@@ -42,9 +42,11 @@ procedure TForm3.Button1Click(Sender: TObject);
 var
   Size: Int64;
 begin
+{
   Image1.Bitmap.LoadFromUrl(edtUrl.Text, Size);
 
   Memo1.Lines.Add('1 : ' + Format('W: %d, H: %d, S: %d', [Image1.Bitmap.Width, Image1.Bitmap.Height, Size]))
+}
 end;
 
 procedure TForm3.Button2Click(Sender: TObject);

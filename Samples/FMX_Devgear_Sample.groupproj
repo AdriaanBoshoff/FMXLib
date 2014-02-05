@@ -9,6 +9,9 @@
         <Projects Include="Android_Toast\Android_ToastDemo.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="SplashWindowTheme\SplashWindowTheme.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -35,14 +38,23 @@
     <Target Name="Android_ToastDemo:Make">
         <MSBuild Projects="Android_Toast\Android_ToastDemo.dproj" Targets="Make"/>
     </Target>
+    <Target Name="SplashWindowTheme">
+        <MSBuild Projects="SplashWindowTheme\SplashWindowTheme.dproj"/>
+    </Target>
+    <Target Name="SplashWindowTheme:Clean">
+        <MSBuild Projects="SplashWindowTheme\SplashWindowTheme.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SplashWindowTheme:Make">
+        <MSBuild Projects="SplashWindowTheme\SplashWindowTheme.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="BitmapUrlDemo;Android_ToastDemo"/>
+        <CallTarget Targets="BitmapUrlDemo;Android_ToastDemo;SplashWindowTheme"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="BitmapUrlDemo:Clean;Android_ToastDemo:Clean"/>
+        <CallTarget Targets="BitmapUrlDemo:Clean;Android_ToastDemo:Clean;SplashWindowTheme:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="BitmapUrlDemo:Make;Android_ToastDemo:Make"/>
+        <CallTarget Targets="BitmapUrlDemo:Make;Android_ToastDemo:Make;SplashWindowTheme:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{FE4F33BE-8F3D-4572-855D-92C56E63535B}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="VCL\VCLTethringApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Mobile\MobileTetheringApp.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="VCLTethringApp">
+        <MSBuild Projects="VCL\VCLTethringApp.dproj"/>
+    </Target>
+    <Target Name="VCLTethringApp:Clean">
+        <MSBuild Projects="VCL\VCLTethringApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VCLTethringApp:Make">
+        <MSBuild Projects="VCL\VCLTethringApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MobileTetheringApp">
+        <MSBuild Projects="Mobile\MobileTetheringApp.dproj"/>
+    </Target>
+    <Target Name="MobileTetheringApp:Clean">
+        <MSBuild Projects="Mobile\MobileTetheringApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MobileTetheringApp:Make">
+        <MSBuild Projects="Mobile\MobileTetheringApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="VCLTethringApp;MobileTetheringApp"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="VCLTethringApp:Clean;MobileTetheringApp:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="VCLTethringApp:Make;MobileTetheringApp:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

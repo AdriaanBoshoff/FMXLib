@@ -16,17 +16,19 @@ uses
 type
   TBitmapHelper = class helper for TBitmap
   public
-    procedure LoadFromUrl(AUrl: string);
-
-    procedure LoadThumbnailFromUrl(AUrl: string; const AFitWidth, AFitHeight: Integer);
+    procedure LoadFromUrl(const AUrl: string);
+    procedure LoadThumbnailFromUrl(const AUrl: string; const AFitWidth, AFitHeight: Integer);
   end;
+
+procedure SetDevgearSSLPath(const aPath: string);
 
 implementation
 
 uses
-  System.SysUtils, System.Types, IdHttp, IdTCPClient, AnonThread;
+  System.SysUtils, System.Types, IdHttp, IdTCPClient, AnonThread,
+  IdIOHandlerSocket, IdIOHandlerStack, IdSSL, IdSSLOpenSSL, IdSSLOpenSSLHeaders;
 
-procedure TBitmapHelper.LoadFromUrl(AUrl: string);
+procedure TBitmapHelper.LoadFromUrl(const AUrl: string);
 var
   _Thread: TAnonymousThread<TMemoryStream>;
 begin
@@ -34,9 +36,15 @@ begin
     function: TMemoryStream
     var
       Http: TIdHttp;
+      ssl: TIdSSLIOHandlerSocketOpenSSL;
     begin
       Result := TMemoryStream.Create;
       Http := TIdHttp.Create(nil);
+      ssl := TIdSSLIOHandlerSocketOpenSSL.Create(nil);
+      ssl.SSLOptions.SSLVersions := [sslvTLSv1, sslvTLSv1_1, sslvTLSv1_2];
+      Http.IOHandler := ssl;
+      Http.Request.UserAgent := 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0';
+      Http.HandleRedirects := True;
       try
         try
           Http.Get(AUrl, Result);
@@ -45,6 +53,7 @@ begin
         end;
       finally
         Http.Free;
+        ssl.Free;
       end;
     end,
     procedure(AResult: TMemoryStream)
@@ -55,12 +64,10 @@ begin
     end,
     procedure(AException: Exception)
     begin
-    end
-  );
+    end);
 end;
 
-procedure TBitmapHelper.LoadThumbnailFromUrl(AUrl: string; const AFitWidth,
-  AFitHeight: Integer);
+procedure TBitmapHelper.LoadThumbnailFromUrl(const AUrl: string; const AFitWidth, AFitHeight: Integer);
 var
   Bitmap: TBitmap;
   scale: Single;
@@ -75,4 +82,10 @@ begin
   end;
 end;
 
+procedure SetDevgearSSLPath(const aPath: string);
+begin
+  IdOpenSSLSetLibPath(aPath);
+end;
+
 end.
+

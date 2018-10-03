@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{15E3A1ED-BAEA-4D51-A92F-B779AED25396}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="FMXLib.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="FMXLib">
+        <MSBuild Projects="FMXLib.dproj"/>
+    </Target>
+    <Target Name="FMXLib:Clean">
+        <MSBuild Projects="FMXLib.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMXLib:Make">
+        <MSBuild Projects="FMXLib.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="FMXLib"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="FMXLib:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="FMXLib:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
